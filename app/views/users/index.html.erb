@@ -1,0 +1,10 @@
+<div class="form_placeholder">
+  <%= render partial: 'users/partials/form_ajax', locals: { user: @user }%>
+</div>
+<hr>
+<div class="users_placeholder">
+  <%= render partial: 'users/partials/users_list', locals: { users: @users } %>
+</div>
+<br>
+
+<%= link_to 'New User', new_user_path, remote: true, class: 'btn btn-success col-md-12' %>

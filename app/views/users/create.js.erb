@@ -1,0 +1,7 @@
+<% if @users  %>
+$(".users_placeholder").html("<%= escape_javascript(render partial: 'users/partials/users_list', locals: { users: @users } ) %>");
+<% else %>
+$(".alert_text").html("Error with creating the user!");
+toggleAlert();
+<% end %>
+updateDatatables();

@@ -1,0 +1,7 @@
+<% if @users %>
+$(".users_placeholder").html("<%= escape_javascript(render partial: 'users/partials/users_list', locals: { users: @users } ) %>");
+<% else %>
+$(".alert_text").html("Error with editing the user! You deleted one of the fields!");
+toggleAlert();
+<% end %>
+updateDatatables();
